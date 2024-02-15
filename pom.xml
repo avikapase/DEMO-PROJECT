@@ -27,6 +27,11 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
+					
+					<systemPropertyVariables>
+						<param>${DynanicNameFromJenkinsJob}</param>						
+					</systemPropertyVariables>
+					
 				</configuration>
 			</plugin>
 		</plugins>
