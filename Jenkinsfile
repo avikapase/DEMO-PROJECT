@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+parameters {
+        string(name: 'name', choices: ['Avinash', 'CRIF'], description: 'This will be used as parameter')
+    }
+
     stages {
         stage('Build') {
             steps {
@@ -8,6 +12,11 @@ pipeline {
             }
         }
         stage('Test') {
+        when {
+                expression {
+                    params.name == 'Avinash'
+                }
+            }
             steps {
                bat 'mvn test'
             }
