@@ -15,9 +15,15 @@ public class HelloWorld {
 	}
 	
 	@Parameters("DynanicNameFromJenkinsJob")
-	@Test
+	@Test(enabled=false)
 	public static void main(String value) {
-		System.out.println("This is test" + value);
+		System.out.println("This is test with parameterized from maven" + value);
+
+	}
+	
+	@Test
+	public static void main() {
+		System.out.println("This is test from jenkinsfile");
 
 	}
 	
