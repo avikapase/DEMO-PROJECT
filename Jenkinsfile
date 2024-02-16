@@ -2,7 +2,7 @@ pipeline {
     agent any
 
 parameters {
-        string(name: 'name', choices: ['Avinash', 'CRIF'], description: 'This will be used as parameter')
+        choice(name: 'name', choices: ['Avinash', 'CRIF'], description: 'This will be used as parameter')
     }
 
     stages {
