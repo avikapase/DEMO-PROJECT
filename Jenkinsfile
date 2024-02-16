@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                // Add deployment steps here if applicable
+                sh "echo DeployCheck"
             }
         }
     }
