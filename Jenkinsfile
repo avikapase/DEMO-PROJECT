@@ -18,7 +18,7 @@ parameters {
                 }
             }
             steps {
-               bat 'mvn test'
+               bat 'mvn test -Denv=${params.name}'
             }
         }
         stage('Deploy') {
