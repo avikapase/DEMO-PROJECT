@@ -28,7 +28,7 @@ public class HelloWorld {
 	
 	@Test
 	public static void main() {
-		String nameJenkinsfile = System.getProperty("name");
+		String nameJenkinsfile = System.getProperty("param");
 		
 		System.out.println("This test is parameterized from Jenkinsfile "+ nameJenkinsfile);
 
