@@ -13,17 +13,24 @@ public class HelloWorld {
 	{
 		System.out.println("This is before method");
 	}
-	
+
+	/*
 	@Parameters("DynanicNameFromJenkinsJob")
 	@Test
 	public static void main(String value) {
 		System.out.println("This is test with parameterized " + value);
 
 	}
+	*/
+	
+	
+	
 	
 	@Test
 	public static void main() {
-		System.out.println("This test is not parameterized");
+		String nameJenkinsfile = System.getProperty("name");
+		
+		System.out.println("This test is parameterized from Jenkinsfile "+ nameJenkinsfile);
 
 	}
 	
